@@ -1,25 +1,13 @@
 import { Component } from '@angular/core';
 
-export class PlayingCard {
-  cardVal: string;
-  suit: string;
-}
-
 @Component({
-  selector: 'app-root',
-  // Multi-line content allowed with back ticks.
-  template: `<h1>Hello world!  {{title}} <br/>
-    {{card.cardVal}} of {{card.suit}}.</h1>
-  Card: <input [(ngModel)]="card.cardVal"><br>
-  Suit: <input [(ngModel)]="card.suit">`
+  selector: 'my-app',
+  template:
+      `<h1>This is the header</h1>
+  <nav>
+    <a routerLink="/page-a" routerLinkActive="active">A</a> |
+    <a routerLink="/page-b/5/bob" routerLinkActive="active">B</a>
+  </nav>
+  <router-outlet></router-outlet>`
 })
-
-export class AppComponent {
-  public title = 'This is Angular 4!';
-
-  // Declare a PlayingCard object.
-  public card: PlayingCard = {
-    cardVal: 'Ace',
-    suit: 'Spades'
-  };
-}
+export class AppComponent { }

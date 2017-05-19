@@ -4,23 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PageDefault } from './app.pagedefault';
-import { PageAComponent } from './app.page-a';
-import { PageBComponent } from './app.page-b';
-import { routing } from './app.routing';
+import { NewDirective } from './newDirective';
+import { ThirdDirective} from './thirdDirective';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageDefault,
-    PageAComponent,
-    PageBComponent
+    NewDirective,
+    ThirdDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    routing
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
