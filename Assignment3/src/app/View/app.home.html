@@ -1,0 +1,6 @@
+<ul>
+  <li class="ID_list" *ngFor="let foodItem of foodItems">
+    <a class="name_list" routerLink="/detail/{{foodItem.id}}">{{foodItem.id}}</a>
+    {{foodItem['name']}}
+  </li>
+</ul>
